@@ -1,0 +1,8 @@
+{
+  "name": "ApiVentory",
+  "app_id": "f0a4c085",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
