@@ -1,19 +1,55 @@
+<ion-header>
+  <ion-navbar color="custom">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ApiVentory</ion-title>
+  </ion-navbar>
+</ion-header>
+
 <ion-menu [content]="content">
+
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
+    <ion-toolbar color="custom">
+      <ion-title>ApiVentory</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+        <!--<ion-icon name="{{p.icon}}"></ion-icon>-->
+         {{p.title}}
       </button>
     </ion-list>
   </ion-content>
+
+  <ion-footer>
+    <ion-navbar padding text-center color="custom">
+    </ion-navbar>
+  </ion-footer>
 
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+<ion-footer>
+
+  <ion-navbar padding text-center color="custom">
+
+    <!--
+    <ion-label color="light" float-left>&copy; ApiVentory</ion-label>
+    <button ion-button small clear float-right color="light">Help</button>
+    <button ion-button small clear float-right color="light">Legal</button>
+    <button ion-button small clear float-right color="light">About</button>
+    -->
+
+
+    <label float-left class="text-light">&copy; ApiVentory</label>
+    <a href="#" float-right class="text-light" padding-horizontal>About</a>
+    <a href="#" float-right class="text-light" padding-horizontal>Help</a>
+
+  </ion-navbar>
+
+</ion-footer>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col col-3>
+      </ion-col>
+      <ion-col col-6>
+        <div>
+
+          <ion-input type="text" placeholder="Sherlock Holmes"></ion-input>
+          <ion-input type="text" placeholder="sherlock@apiventory.com"></ion-input>
+          <ion-input type="password" placeholder="P@$5w0rD"></ion-input>
+          <br />
+          <button (click)="register()" ion-button color="secondary" full>Register</button>
+          <br />
+          <button (click)="login()" ion-button color="primary" full clear>Login</button>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-navbar>
+  </ion-navbar>
+</ion-footer>

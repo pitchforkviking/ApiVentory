@@ -21,7 +21,10 @@ $app-direction: ltr;
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
+$font-family-base: 'Raleway';
+$font-family-ios-base: 'Raleway';
+$font-family-md-base: 'Raleway';
+$font-family-wp-base: 'Raleway';
 
 
 
@@ -38,7 +41,11 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  custom: (
+    base: #304ffe,
+    contrast: #ffffff
+  )
 );
 
 
@@ -83,6 +90,6 @@ $colors: (
 
 // Fonts
 // --------------------------------------------------
-
-@import "roboto";
-@import "noto-sans";
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+//@import "roboto";
+//@import "noto-sans";
