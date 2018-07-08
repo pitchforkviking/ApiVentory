@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, PopoverController } from 'ionic-angular';
+
+import {ApiPopoverPage} from '../api-popover/api-popover';
 
 @Component({
   selector: 'page-account',
@@ -7,16 +9,32 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class AccountPage {
 
-  public apis: Array<{title: string, type: string, request: string}>;
+  public activeApis: Array<{title: string, type: string, request: string, base: string}>;
+  public availableApis: Array<{title: string, type: string, request: string}>;
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams) {
+    public navParams: NavParams,
+    private popoverCtrl: PopoverController) {
 
-      this.apis = [
-        {title: 'Leaderboard', type: 'GET', request: '/api/Leaderboard'},
-        {title: 'Leaderboard', type: 'POST', request: '/api/Leaderboard'},
-        {title: 'Encryption', type: 'GET', request: '/api/Encryption'}
+      this.activeApis = [
+        {title: 'Leaderboard', type: 'GET', request: 'api/v1/Leaderboard', base: 'https://apiventory.com/' },
+        {title: 'Leaderboard', type: 'POST', request: 'api/v1/Leaderboard', base: 'https://apiventory.com/'},
+        {title: 'Encryption', type: 'GET', request: 'api/v1/Encryption', base: 'https://apiventory.com/'}
       ];
+
+      this.availableApis = [
+        {title: 'Notification', type: 'GET', request: '/api/Notification'},
+        {title: 'Notification', type: 'POST', request: '/api/Leaderboard'},
+        {title: 'Search', type: 'GET', request: '/api/Search'},
+        {title: 'Query', type: 'GET', request: '/api/Query'},
+      ];
+  }
+
+  present(activeApi:any) {
+
+    let popover = this.popoverCtrl.create(ApiPopoverPage, {'activeApi': activeApi});
+    popover.present();
+
   }
 }

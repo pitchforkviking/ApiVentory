@@ -1,0 +1,17 @@
+<ion-content padding class="no-scroll">
+
+    <ion-card>
+      <ion-card-header>
+        {{activeApi.title}}
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{activeApi.type}} {{activeApi.base}}{{activeApi.request}}</p>
+      </ion-card-content>     
+
+      <button ion-button clear small color="custom" icon-start>
+        <ion-icon name='copy'></ion-icon>
+        Copy
+      </button>
+    </ion-card>
+
+</ion-content>

@@ -12,6 +12,7 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { ReferencePage } from '../pages/reference/reference';
 import { AboutPage } from '../pages/about/about';
+import {ApiPopoverPage} from '../pages/api-popover/api-popover';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     ReferencePage,
     RegisterPage,
-    AboutPage
+    AboutPage,
+    ApiPopoverPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     ReferencePage,
     RegisterPage,
-    AboutPage
+    AboutPage,
+    ApiPopoverPage
   ],
   providers: [
     StatusBar,
