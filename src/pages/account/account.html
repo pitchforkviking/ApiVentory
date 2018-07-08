@@ -5,6 +5,22 @@
 
 <ion-content padding>
 
+    <ion-list no-border>
+
+      <ion-list-header no-lines>
+        Enabled 
+      </ion-list-header>
+
+      <ion-item *ngFor="let api of apis">
+        <ion-badge item-start>{{api.type}}</ion-badge>
+        <ion-toggle checked="true"></ion-toggle>
+        <ion-label>
+          {{api.title}}
+        </ion-label>      
+      </ion-item>
+
+    </ion-list>
+
 </ion-content>
 
 <ion-footer>

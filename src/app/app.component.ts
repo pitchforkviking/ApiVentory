@@ -22,7 +22,7 @@ export class ApiVentory {
   public rootPage: any = HomePage;
 
   public title: string = 'ApiVentory';
-  public version: string = 'V20180708.1';
+  public version: string = 'V.20180708.1';
 
   public pages: Array<{title: string, component: any, icon: string, description: string}>;
   public links: Array<{title: string, component: any}>

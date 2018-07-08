@@ -5,6 +5,35 @@
 
 <ion-content padding>
 
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 *ngFor="let plan of plans">
+            <ion-card>
+                <ion-card-content>
+                  <ion-card-title>
+                    {{plan.title}}
+                  </ion-card-title>
+                  <p>
+                    {{plan.api}}
+                    </p>
+                    <p>
+                    {{plan.request}}
+                  </p>
+                  <p>
+                      {{plan.price}}
+                    </p>
+                </ion-card-content>            
+                
+                <button ion-button clear small color="danger" icon-start>
+                  <ion-icon name='star'></ion-icon>
+                  Subscribe
+                </button>
+            
+              </ion-card>
+        </ion-col>         
+      </ion-row>
+    </ion-grid>
+
 </ion-content>
 
 <ion-footer>
