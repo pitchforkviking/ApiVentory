@@ -6,10 +6,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { AccountPage } from '../pages/account/account';
 import { HelpPage } from '../pages/help/help';
-import { DashboardPage } from '../pages/dashboard/dashboard';
 import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from '../pages/register/register';
-import { ReferencePage } from '../pages/reference/reference';
+import { AboutPage } from '../pages/about/about';
+
+//import { DashboardPage } from '../pages/dashboard/dashboard';
+//import { RegisterPage } from '../pages/register/register';
+//import { ReferencePage } from '../pages/reference/reference';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,46 +19,43 @@ import { ReferencePage } from '../pages/reference/reference';
 export class ApiVentory {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  public rootPage: any = HomePage;
 
-  //currentPage: any;
-  //public currentYear: any;
+  public title: string = 'ApiVentory';
+  public version: string = 'V20180708.1';
 
-  pages: Array<{title: string, component: any, icon: any}>;
+  public pages: Array<{title: string, component: any, icon: string, description: string}>;
+  public links: Array<{title: string, component: any}>
 
   constructor(
     public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen) {
-    this.initializeApp();
 
-    // used for an example of ngFor and navigation
+    this.begin();
+
     this.pages = [
-      { title: 'Home/Dashboard', component: HomePage, icon: 'home' },
-      { title: 'Account/Billing', component: AccountPage, icon: 'card'},
-      { title: 'Help/Support', component: HelpPage, icon: 'help-circle'},
-      { title: 'Login/Register', component: LoginPage, icon: 'person'}
+      { title: 'Home/Dashboard', component: HomePage, icon: 'home', description: 'Your App, Our Api' },
+      { title: 'Account/Billing', component: AccountPage, icon: 'card', description: 'Your Subscription and Billing'},
+      { title: 'Help/Support', component: HelpPage, icon: 'help-circle', description: 'We\'re Here to Help'},
+      { title: 'Login/Register', component: LoginPage, icon: 'person', description: 'Let\'s Begin'}
     ];
 
-    //this.currentPage = this.pages[0];
-    //this.currentYear = new Date().getFullYear();
-
+    this.links = [
+      {title: 'Help', component: HelpPage},
+      {title: 'About', component: AboutPage}
+    ];
 
   }
 
-  initializeApp() {
+  public begin():void {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
+      this.statusBar.hide();
       this.splashScreen.hide();
     });
   }
 
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    //this.currentPage = page;
+  public open(page):void {
     this.nav.setRoot(page.component);
   }
 }

@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>ApiVentory</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,21 +11,34 @@
 
   <ion-header>
     <ion-toolbar color="custom">
-      <ion-title>ApiVentory</ion-title>
+      <ion-title>{{title}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
+    <ion-card menuClose ion-item *ngFor="let page of pages" (click)="open(page)">
+      <ion-card-content>
+        <ion-card-title>
+          {{page.title}}
+        </ion-card-title>
+        <p>
+          {{page.description}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+<!--
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        <!--<ion-icon name="{{p.icon}}"></ion-icon>-->
+      <button menuClose ion-item *ngFor="let page of pages" (click)="open(page)">
+
          {{p.title}}
       </button>
-    </ion-list>
+    </ion-list> -->
   </ion-content>
 
   <ion-footer>
     <ion-navbar padding text-center color="custom">
+      <ion-note float-left color="light">{{version}}</ion-note>
     </ion-navbar>
   </ion-footer>
 
@@ -46,9 +59,8 @@
     -->
 
 
-    <label float-left class="text-light">&copy; ApiVentory</label>
-    <a href="#" float-right class="text-light" padding-horizontal>About</a>
-    <a href="#" float-right class="text-light" padding-horizontal>Help</a>
+    <label float-left class="text-light">&copy; {{title}}</label>
+    <a href="#" float-right class="text-light" padding-horizontal *ngFor="let link of links" (click)="open(link)">{{link.title}}</a>
 
   </ion-navbar>
 

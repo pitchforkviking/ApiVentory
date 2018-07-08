@@ -14,11 +14,9 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ReferencePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ReferencePage');
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams) {
   }
 
 }

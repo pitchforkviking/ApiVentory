@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { HttpClientModule } from '@angular/common/http';
+//import { HttpClientModule } from '@angular/common/http';
 
 import { ApiVentory } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -11,7 +11,7 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { ReferencePage } from '../pages/reference/reference';
-
+import { AboutPage } from '../pages/about/about';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DashboardPage,
     LoginPage,
     ReferencePage,
-    RegisterPage
+    RegisterPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +41,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DashboardPage,
     LoginPage,
     ReferencePage,
-    RegisterPage
+    RegisterPage,
+    AboutPage
   ],
   providers: [
     StatusBar,
