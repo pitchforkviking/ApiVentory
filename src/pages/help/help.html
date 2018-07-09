@@ -4,6 +4,33 @@
 </ion-header>
 
 <ion-content padding>
+  
+    <ion-grid>
+        <ion-row align-items-center>
+          <ion-col col-3>
+          </ion-col>
+          <ion-col col-6>
+            <div>
+                <ion-select interface="popover">
+                    <ion-option selected="true">Section</ion-option>                  
+                  <ion-option value="{{section}}" *ngFor="let section of sections">{{section}}</ion-option>                  
+                </ion-select>
+                <br />
+                <ion-textarea text-center placeholder="facing issue with login"></ion-textarea>             
+                <br />
+              <button ion-button color="custom" full>Submit</button>              
+              
+            </div>
+            <br />
+            <button ion-button color="primary" full clear>Reference</button>
+          </ion-col>
+          <ion-col col-3>
+          </ion-col>
+        </ion-row>
+    
+      </ion-grid>
+
+      
 
 </ion-content>
 

@@ -1,4 +1,10 @@
 page-api-popover {
+
+    .popover-content{
+        min-width: 50vw !important;
+        min-height: 40vh !important;
+    }
+
     .no-scroll  {
         overflow: scroll;
         overflow-x: hidden !important;

@@ -14,7 +14,7 @@ export class LoginPage {
   }
 
   public register():void{
-    this.navCtrl.push(RegisterPage)
+    this.navCtrl.setRoot(RegisterPage)
   }
 
   public login():void{

@@ -12,6 +12,11 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { ReferencePage } from '../pages/reference/reference';
 import { AboutPage } from '../pages/about/about';
+import { PaymentPage } from '../pages/payment/payment';
+import { PricingPage } from '../pages/pricing/pricing';
+import { LogoutPage } from '../pages/logout/logout';
+import { ProfilePage } from '../pages/profile/profile';
+
 import {ApiPopoverPage} from '../pages/api-popover/api-popover';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -28,6 +33,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ReferencePage,
     RegisterPage,
     AboutPage,
+    PaymentPage,
+    PricingPage,
+    LogoutPage,
+    ProfilePage,
     ApiPopoverPage
   ],
   imports: [
@@ -45,6 +54,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ReferencePage,
     RegisterPage,
     AboutPage,
+    PaymentPage,
+    PricingPage,
+    LogoutPage,
+    ProfilePage,
     ApiPopoverPage
   ],
   providers: [

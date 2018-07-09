@@ -9,7 +9,7 @@ import {ApiPopoverPage} from '../api-popover/api-popover';
 })
 export class AccountPage {
 
-  public activeApis: Array<{title: string, type: string, request: string, base: string}>;
+  public activeApis: Array<{title: string, type: string, request: string, base: string, params: string}>;
   public availableApis: Array<{title: string, type: string, request: string}>;
 
   constructor(
@@ -18,9 +18,9 @@ export class AccountPage {
     private popoverCtrl: PopoverController) {
 
       this.activeApis = [
-        {title: 'Leaderboard', type: 'GET', request: 'api/v1/Leaderboard', base: 'https://apiventory.com/' },
-        {title: 'Leaderboard', type: 'POST', request: 'api/v1/Leaderboard', base: 'https://apiventory.com/'},
-        {title: 'Encryption', type: 'GET', request: 'api/v1/Encryption', base: 'https://apiventory.com/'}
+        {title: 'Leaderboard', type: 'GET', request: 'api/v1/Leaderboard', base: 'https://apiventory.com/', params: '{ \'user\': sherlock@apiventory.com }' },
+        {title: 'Leaderboard', type: 'POST', request: 'api/v1/Leaderboard', base: 'https://apiventory.com/', params: '{ \'user\': sherlock@apiventory.com, \'score\': 100}'},
+        {title: 'Encryption', type: 'GET', request: 'api/v1/Encryption', base: 'https://apiventory.com/', params: '{ \'key\': sherlock, \'value\': P@$5w0rD }'}
       ];
 
       this.availableApis = [

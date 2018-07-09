@@ -1,11 +1,22 @@
-<ion-content padding class="no-scroll">
+<ion-content padding>
 
+  <div class="base no-scroll">
+    <h2>{{activeApi.title}}</h2>
+    <p>
+      {{activeApi.type}} {{activeApi.base}}{{activeApi.request}}
+    </p>
+    <p>
+      {{activeApi.params}}
+    </p>
+  </div>
+  <!--
     <ion-card>
       <ion-card-header>
         {{activeApi.title}}
       </ion-card-header>
       <ion-card-content>
         <p>{{activeApi.type}} {{activeApi.base}}{{activeApi.request}}</p>
+        <p>{{activeApi.params}}</p>
       </ion-card-content>     
 
       <button ion-button clear small color="custom" icon-start>
@@ -13,5 +24,5 @@
         Copy
       </button>
     </ion-card>
-
+    -->
 </ion-content>
