@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 input[type=text] { text-align:center }
+input[type=email] { text-align:center }
 input[type=password] { text-align:center }
 
 .text-light{
   color: #ffffff;
+}
+
+.menu-card{
+  padding: 0px 0px !important;
 }

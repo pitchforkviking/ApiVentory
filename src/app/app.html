@@ -17,7 +17,7 @@
 
   <ion-content>
     <ion-card menuClose ion-item *ngFor="let page of pages">
-      <ion-card-content>
+      <ion-card-content class="menu-card">
         <ion-card-title (click)="open(page)">
           <ion-icon name="{{page.icon}}"></ion-icon>
           {{page.description}}
