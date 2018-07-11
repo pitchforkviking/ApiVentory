@@ -5,43 +5,39 @@
 
 <ion-content padding class="card-background-page">
 
-    <ion-grid no-padding>
+    <ion-grid no-padding justify-content-center align-items-center>
         <ion-row>
-          <ion-col col-3>            
-          </ion-col>
-          <ion-col col-12>
-              <ion-slides pager>
-
-                  <ion-slide>
-                      <ion-card>
-                        <img src="../../assets/imgs/slide-bg.jpg"/>
-                        <div class="card-title">Simple</div>
-                        <div class="card-subtitle">Simple Setup, Simply Works</div>
-                      </ion-card>
-                  </ion-slide>
+          <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 *ngFor="let statement of statements">
+              
+            <ion-card>
+              <img src="../../assets/imgs/slide-bg.jpg"/>
+              <div class="card-title">{{statement.title}}</div>
+              <div class="card-subtitle">{{statement.description}}</div>
+            </ion-card>
                 
-                  <ion-slide>
-                      <ion-card>
-                          <img src="../../assets/imgs/slide-bg.jpg"/>
-                          <div class="card-title">Secure</div>
-                          <div class="card-subtitle">Encryption End-to-End</div>
-                        </ion-card>
-                  </ion-slide>
-                
-                  <ion-slide>
-                      <ion-card>
-                          <img src="../../assets/imgs/slide-bg.jpg"/>
-                          <div class="card-title">Scalable</div>
-                          <div class="card-subtitle">From 4 to 4 Million</div>
-                        </ion-card>
-                  </ion-slide>
-                
-                </ion-slides>
-          </ion-col>
-          <ion-col col-3>            
+                  
           </ion-col>
         </ion-row>
-      </ion-grid>
+
+        <ion-row>
+          <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 *ngFor="let step of steps">
+              <ion-card>
+                  <img src="{{step.image}}"/>
+                  <ion-card-content>
+                    <ion-card-header>
+                      Step {{step.number}}
+                    </ion-card-header>
+                    <p>
+                      {{step.title}}
+                      </p>
+                      <p>
+                      {{step.description}}
+                    </p>
+                  </ion-card-content>                          
+                </ion-card>
+          </ion-col>         
+        </ion-row>
+    </ion-grid>
 
   
 
