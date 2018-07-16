@@ -16,6 +16,8 @@ import { PaymentPage } from '../pages/payment/payment';
 import { PricingPage } from '../pages/pricing/pricing';
 import { LogoutPage } from '../pages/logout/logout';
 import { ProfilePage } from '../pages/profile/profile';
+import { RequestPage } from '../pages/request/request';
+import { FeedbackPage } from '../pages/feedback/feedback';
 
 import {ApiPopoverPage} from '../pages/api-popover/api-popover';
 
@@ -37,6 +39,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PricingPage,
     LogoutPage,
     ProfilePage,
+    RequestPage,
+    FeedbackPage,
     ApiPopoverPage
   ],
   imports: [
@@ -58,6 +62,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PricingPage,
     LogoutPage,
     ProfilePage,
+    RequestPage,
+    FeedbackPage,
     ApiPopoverPage
   ],
   providers: [

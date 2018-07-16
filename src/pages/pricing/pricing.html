@@ -3,9 +3,9 @@
     </ion-navbar>
   </ion-header>
   
-  <ion-content padding>
+  <ion-content padding class="card-background-page">
   
-      <ion-grid>
+      <!-- <ion-grid>
         <ion-row>
           <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 *ngFor="let plan of plans">
               <ion-card>
@@ -32,7 +32,32 @@
                 </ion-card>
           </ion-col>         
         </ion-row>
-      </ion-grid>
+      </ion-grid> -->
+
+      <ion-grid no-padding justify-content-center align-items-center>
+        <ion-row>
+          <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 *ngFor="let plan of plans">
+              
+            <ion-card>
+              <img src="../../assets/imgs/slide-bg.jpg"/>
+              <div class="card-title">{{plan.title}}</div>
+              <div class="card-subtitle">
+                <p>
+                  {{plan.api}}
+                  </p>
+                  <p>
+                  {{plan.request}}
+                </p>
+                <p>
+                    {{plan.price}}
+                  </p>
+              </div>
+            </ion-card> 
+          </ion-col>
+        </ion-row>
+
+        
+    </ion-grid>
 
       <button ion-button color="primary" full clear>Home</button>
   
